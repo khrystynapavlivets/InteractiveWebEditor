@@ -1,0 +1,400 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* General body styles */
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 16px;
+  word-spacing: 0.3em;
+  letter-spacing: 0.6px;
+}
+  /* General body styles */
+  .container {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+/* Styling for the block container */
+.block {
+  min-height: 330px;
+  border-radius: 5px;
+  background-color: lightgray;
+  margin: 20px 0;
+  padding: 20px 40px;
+  position: relative;
+}
+
+/* Styling for paragraphs inside the block container */
+.block p {
+  margin: 8px 0;
+}
+/* Center alignment for certain elements */
+.center-block {
+  text-align: center;
+}
+/* styling for buttons edit and style */
+
+.center-block input,
+.edit-block input {
+  width: 70px;
+  height: 40px;
+  font-size: 16px;
+  margin: 0 3px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.4s;
+}
+/* Styling for the edit button */
+.btn-edit {
+  background-color: gold;
+}
+/* Hover effect for the edit button */
+.btn-edit:hover {
+  background-color: rgb(221, 190, 11);
+  box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
+    rgba(50, 50, 93, 0.2) 0 6px 15px 0, rgba(0, 0, 0, 0.1) 0 2px 2px 0,
+    rgba(225, 172, 48, 0.3) 0 0 0 4px;
+}
+/* Active state for the edit button */
+.btn-edit:active {
+  background-color: rgb(201, 174, 19);
+  box-shadow: rgb(254, 229, 87) 0 0 0 1px inset, rgb(238, 208, 36) 0 7px 16px 0,
+    rgb(240, 209, 35) 0 3px 3px 0, rgb(220, 192, 32) 0 0 0 5px;
+}
+/* Styling for the style button */
+.btn-style {
+  color: white;
+  background-color: deepskyblue;
+}
+/* Hover effect for the add button */
+.btn-style:hover {
+  background-color: rgb(3, 151, 200);
+  box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
+    rgba(50, 50, 93, 0.2) 0 6px 15px 0, rgba(0, 0, 0, 0.1) 0 2px 2px 0,
+    rgb(115, 217, 251) 0 0 0 4px;
+}
+/* Active state for the style button */
+.btn-style:active {
+  background-color: rgb(5, 133, 176);
+  border: 0.1px solid rgb(167, 229, 250);
+  box-shadow: rgb(3, 151, 200) 0 0 0 1px inset, rgb(12, 163, 213) 0 7px 16px 0,
+    rgb(59, 198, 245) 0 3px 3px 0, rgb(45, 198, 248) 0 0 0 5px;
+}
+
+/* styling for extarea  */
+/* Hide the edit and style blocks by default */
+.edit-block,
+.style-block {
+  display: none;
+}
+/* Styling for the edit area */
+.edit-area {
+  width: 100%;
+  height: 230px;
+  resize: none;
+  margin-bottom: 10px;
+}
+/* Styling for the add button */
+.btn-add {
+  color: white;
+  background-color: red;
+}
+/* Hover effect for the add button */
+.btn-add:hover {
+  background-color: rgb(189, 33, 33);
+  box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
+    rgba(50, 50, 93, 0.2) 0 6px 15px 0, rgba(0, 0, 0, 0.1) 0 2px 2px 0,
+    rgba(186, 40, 40, 0.664) 0 0 0 4px;
+}
+/* Active state for the add button */
+.btn-add:active {
+  background-color: rgb(252, 63, 63);
+  border: 0.1px solid rgb(250, 167, 167);
+  box-shadow: rgba(210, 83, 83, 0.615) 0 0 0 5px;
+}
+/* Styles for the save button */
+.btn-save {
+  color: white;
+  background-color: green;
+}
+/* Hover effect for the save button */
+.btn-save:hover {
+  background-color: rgba(15, 146, 15, 0.95);
+  box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
+    rgba(50, 50, 93, 0.2) 0 6px 15px 0, rgba(0, 0, 0, 0.1) 0 2px 2px 0,
+    rgba(35, 170, 35, 0.722) 0 0 0 4px;
+}
+/* Active state for the save button */
+.btn-save:active {
+  background-color: rgba(10, 138, 10, 0.936);
+  border: 0.1px solid rgb(167, 250, 193);
+  box-shadow: rgba(8, 155, 8, 0.63) 0 0 0 5px;
+}
+
+/* styling for fond size(radio) and styles(checkbox)*/
+.form-size input[type="radio"],
+.secondBlockRadio input[type="radio"] {
+  appearance: none;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  background-color: #999;
+  transition: 0.3s all;
+  margin: 10px 7px 10px 0px;
+}
+/* Styles for checkboxes in the form-style class */
+.form-style input[type="checkbox"] {
+  display: inline-block;
+  appearance: none;
+  border-radius: 4px;
+  width: 18px;
+  height: 18px;
+  background-color: #999;
+  transition: 0.3s all;
+  margin: 10px 7px 10px 0px;
+}
+/* Styles for checked radio buttons */
+input[type="radio"]:checked {
+  border: 5px solid rgb(62, 105, 191);
+  background-color: #e9e6e6;
+}
+/* Styles for active (clicked) checkboxes and radio buttons */
+input[type="radio"]:active,
+input[type="checkbox"]:active {
+  box-shadow: rgb(168, 167, 167) 0 0 2px 5px;
+}
+/* Styles for focused radio buttons */
+input[type="radio"]:focus {
+  box-shadow: rgba(62, 105, 191, 0.527) 0 0 3px 2px;
+}
+/* Styles to select the font size */
+.form-size {
+  position: relative;
+}
+.form-size span,
+.secondBlockRadio span {
+  position: relative;
+  bottom: 12px;
+  margin-right: 12px;
+}
+.form-style span {
+  position: relative;
+  bottom: 18px;
+  margin-right: 15px;
+  top: 0;
+}
+/* Styles for the custom checkbox icon */
+.form-style input[type="checkbox"]::after {
+  content: "\e9c3";
+  font-family: unicons-line;
+  font-size: 18px;
+  color: #fffcfc;
+  background-color: rgb(62, 105, 191);
+  position: relative;
+  border-radius: 4px;
+  opacity: 0;
+}
+/* Styles for the checked state of the custom checkbox icon */
+.form-style input[type="checkbox"]:checked::after {
+  opacity: 1;
+}
+
+/* styling for  fond family */
+#fontFamily {
+  width: 300px;
+  height: 30px;
+  margin: 10px 0;
+}
+
+/* styling for  colors */
+/* Styles for the color buttons */
+.form-color input[type="button"] {
+  margin: 10px 10px 10px 0px;
+  width: 160px;
+  height: 29px;
+  border-radius: 5px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+  background-color: darkgrey;
+  border: none;
+}
+  /* Button hover styles */
+.form-color input[type="button"]:hover {
+  background-color: rgb(129, 128, 128);
+  box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
+    rgba(50, 50, 93, 0.2) 0 6px 15px 0, rgba(0, 0, 0, 0.1) 0 2px 2px 0,
+    rgb(187, 186, 186) 0 0 0 4px;
+}
+  /* Button active styles */
+
+.form-color input[type="button"]:active {
+  background-color: rgba(10, 138, 10, 0.936);
+  border: 0.1px solid rgb(167, 250, 193);
+  box-shadow: rgba(8, 155, 8, 0.63) 0 0 0 5px;
+}
+/* Button focus styles */
+.form-color input[type="button"]:focus {
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+}
+ /* Styles for the color options container */
+.colors {
+  width: 150px;
+  height: 150px;
+  outline: 1px solid black;
+  position: absolute;
+  top: 84px;
+  right: 150px;
+  display: flex;
+  flex-wrap: wrap;
+}
+ /* Styles for each individual color option box */
+.color-box {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+}
+
+/* styling for  list */
+.create-list input[type="text"] {
+  width: 350px;
+  height: 30px;
+  padding: 0px 10px;
+  margin: 15px 0px 10px 70px;
+}
+  /* Select styles for a type list */
+.create-list select[name="typeList"] {
+  width: 350px;
+  height: 30px;
+  margin: 15px 0px 20px 38px;
+}
+  /* Button styles for the list form */
+.create-list input[type="button"] {
+  width: 100px;
+  height: 36px;
+  color: white;
+  background-color: green;
+  border-radius: 5px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+  border: none;
+}
+  /* Button hover styles for the list form */
+.create-list input[type="button"]:hover {
+  background-color: rgba(15, 146, 15, 0.95);
+  box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
+    rgba(50, 50, 93, 0.2) 0 6px 15px 0, rgba(0, 0, 0, 0.1) 0 2px 2px 0,
+    rgba(35, 170, 35, 0.722) 0 0 0 4px;
+}
+/* Button active styles for the list form */
+.create-list input[type="button"]:active {
+  border: 0.1px solid rgba(150, 213, 150, 0.776);
+  box-shadow: rgb(130, 130, 130) 0 0 0 1px inset,
+    rgb(161, 161, 161) 0 7px 16px 0, rgb(161, 161, 161) 0 3px 3px 0,
+    rgba(42, 149, 42, 0.776) 0 0 0 5px;
+  background-color: rgba(20, 125, 20, 0.893);
+}
+
+/* create table  */
+.create-table {
+  height: 360px;
+  width: 864px;
+  border-radius: 5px;
+  background-color: lightgray;
+  padding: 20px;
+  position: relative;
+  top: 0;
+  right: 40px;
+}
+
+h3 {
+  margin: 10px 0;
+}
+ /* Input styles for the table form */
+.create-table input[type="text"] {
+  width: 684px;
+  height: 30px;
+  margin: 10px 0px 5px 70px;
+  padding: 0px 10px;
+}
+
+   /* Select styles for a specific input coloumn width in the table form */
+.create-table input[id="colWidthInput"] {
+  margin: 10px 0px 5px 49px;
+}
+
+   /* Select styles for a specific input coloumn height in the table form */
+.create-table input[id="colHeightInput"] {
+  margin: 10px 0px 5px 45px;
+}
+  /* Select styles for a specific input width border in the table form */
+.create-table input[id="widthBorderInput"] {
+  width: 115px;
+  margin: 10px 18px 5px 27px;
+  padding: 0px 10px;
+}
+  /* Select styles for a specific select type border in the table form */
+select[id="typeBorder"] {
+  width: 129px;
+  height: 30px;
+  margin: 0 18px 5px 10px;
+  padding: 0px 10px;
+}
+  /* Select styles for a specific select color border in the table form */
+select[id="colorBorder"] {
+  width: 129px;
+  height: 30px;
+  margin: 0 0px 5px 10px;
+  padding: 0px 10px;
+}
+  /* Button styles for the table form */
+.create-table input[type="button"] {
+  width: 100px;
+  height: 36px;
+  margin-top: 10px;
+  color: white;
+  background-color: green;
+  border-radius: 5px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+  border: none;
+}
+  /* Button hover styles for the table form */
+.create-table input[type="button"]:hover {
+  background-color: rgba(15, 146, 15, 0.95);
+  box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
+    rgba(50, 50, 93, 0.2) 0 6px 15px 0, rgba(0, 0, 0, 0.1) 0 2px 2px 0,
+    rgba(35, 170, 35, 0.722) 0 0 0 4px;
+}
+/* Button active styles for the table form */
+.create-table input[type="button"]:active {
+  border: 0.1px solid rgba(150, 213, 150, 0.776);
+  box-shadow: rgb(130, 130, 130) 0 0 0 1px inset,
+    rgb(161, 161, 161) 0 7px 16px 0, rgb(161, 161, 161) 0 3px 3px 0,
+    rgba(42, 149, 42, 0.776) 0 0 0 5px;
+  background-color: rgba(20, 125, 20, 0.893);
+}
+/* end create table  */
+/* Styles for bold text */
+.bold {
+  font-weight: bold;
+}
+/* Styles for cursive text */
+.cursive {
+  font-style: italic;
+}
+/* Classes used to control the display of specific elements */
+.first,
+.second,
+.create-list,
+.create-table {
+  display: none;
+}
+/* Class to hide elements */
+.hide {
+  display: none;
+}
+/* Class to show elements */
+.show {
+  display: block;
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="first show">
+            <div class="block block-table top-block">
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="center-block">
+                <input type="button" value="edit" class="btn-edit" />
+                <input type="button" value="style" class="btn-style" />
+            </div>
+            <div class="block bottom-block">
+                <div class="edit-block">
+                    <textarea class="edit-area"></textarea>
+                    <input type="button" value="add" class="btn-add" />
+                    <input type="button" value="save" class="btn-save" />
+                </div>
+                <div class="style-block">
+                    <form>
+                        <div class="form-size">
+                            <h2>Font size</h2>
+                            <input type="radio" class="radio-form" onclick="fontSize()" name="size"
+                                value="12px" /><span>12px</span>
+                            <input type="radio" class="radio-form" onclick="fontSize()" name="size"
+                                value="14px" /><span>14px</span>
+                            <input type="radio" class="radio-form" onclick="fontSize()" name="size" value="16px"
+                                checked />
+                            <span>16px</span>
+                            <input type="radio" class="radio-form" onclick="fontSize()" name="size"
+                                value="18px" /><span>18px</span>
+                            <input type="radio" class="radio-form" onclick="fontSize()" name="size"
+                                value="20px" /><span>20px</span>
+                        </div>
+                        <div class="form-family">
+                            <h2>Font family</h2>
+                            <select id="fontFamily">
+                                <option value="" id="option-disabled">Choose option</option>
+                                <option value="cursive">cursive</option>
+                                <option value="fantasy">fantasy</option>
+                                <option value="monospace">monospace</option>
+                                <option value="sans-serif">sans-serif</option>
+                            </select>
+                        </div>
+                        <div class="form-color">
+                            <h2>Color</h2>
+                            <input type="button" value="Color of text" class="btn-text-color" />
+                            <input type="button" value="Background color" class="btn-bg-color" />
+                            <div class="colors hide">
+                                <div class="color-box"></div>
+                                <div class="color-box"></div>
+                                <div class="color-box"></div>
+                                <div class="color-box"></div>
+                                <div class="color-box"></div>
+                                <div class="color-box"></div>
+                                <div class="color-box"></div>
+                                <div class="color-box"></div>
+                                <div class="color-box"></div>
+                            </div>
+                        </div>
+                        <div class="form-style">
+                            <h2>Style</h2>
+                            <input type="checkbox" name="text-styles" id='checkbox-bold'
+                                onclick="fontWeight()" /><span>Bold text</span>
+                            <input type="checkbox" name="text-styles" id='checkbox-cursive'
+                                onclick="fontCursive()" /><span>Cursive text</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="second">
+            <div class="block">
+                <h2>Choose what you want:</h2>
+                <div class="secondBlockRadio">
+                    <form>
+                        <input type="radio" name="chooseRadio" id="tableRadio" /><span>table</span>
+                        <input type="radio" name="chooseRadio" id="listRadio" /><span>list</span>
+                    </form>
+                </div>
+                <div class="create-list">
+                    <form name="form-list">
+                        <div>
+                            <span>Count Li:</span> <input type="text" name="countList" placeholder="Count Li:" />
+                        </div>
+                        <div>
+                            <span>Type of marks:</span><select name="typeList">
+                                <option value="circle">circle</option>
+                                <option value="disc">disc</option>
+                                <option value="square">square</option>
+                            </select>
+                        </div>
+                        <input type="button" value="Create list" name="create" class="btn-create-list" />
+                    </form>
+                </div>
+                <div class="create-table">
+                    <form name="form-table">
+                        <div>
+                            <span>Count TR:</span><input type="text" name="countRow" id="rowCountInput"
+                                placeholder="Color TR:">
+                        </div>
+                        <div><span>Count TD:</span><input type="text" name="countCol" id="colCountInput"
+                                placeholder="Color TD:">
+                        </div>
+
+                        <h3>Add style to your table:</h3>
+                        <div><span>Width of TD:</span><input type="text" name="widthCol" id="colWidthInput"
+                                placeholder="Width of TD:"></div>
+                        <div><span>Height of TD:</span><input type="text" name="heightCol" id="colHeightInput"
+                                placeholder="Height of TD:"></div>
+
+                        <span>Width of border:</span><input type="text" name="widthBorder" id="widthBorderInput"
+                            placeholder="Width:">
+                        <span>Type of border:</span>
+                        <select id="typeBorder" name="typeBorder">
+                            <option value="solid">solid</option>
+                            <option value="dotted">dotted</option>
+                            <option value="dashed">dashed</option>
+                            <option value="double">double</option>
+                        </select>
+                        <span>Color of border: </span>
+                        <select id="colorBorder" name="colorBorder">
+                            <option value="black">black</option>
+                            <option value="red">red</option>
+                            <option value="blue">blue</option>
+                            <option value="green">green</option>
+                        </select>
+
+
+                        <div>
+                            <input type="button" value="Create table" name="create" class="btn-create-table" />
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/8fc6cedac4.js" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
